@@ -1,7 +1,7 @@
 public class Livro {
     String nome;
     String descricao;
-    double valor;
+    private double valor;
     String isbn;
     Autor autor;
 
@@ -23,8 +23,19 @@ public class Livro {
         System.out.println("--");
     }
 
-    public void aplicaDescontoDe(double porcentagem){
+    public boolean aplicaDescontoDe(double porcentagem){
+        if(porcentagem > 0.3)
+            return false;
         this.valor -= this.valor * porcentagem;
+        return true;
 
+    }
+    
+    void adicionaValor(double valor){
+        this.valor = valor;
+    }
+    
+    double retornaValor(){
+        return this.valor;
     }
 }
