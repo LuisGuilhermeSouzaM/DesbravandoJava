@@ -5,6 +5,16 @@ public class Livro {
     String isbn;
     Autor autor;
 
+
+    public Livro(Autor autor) {
+        this();
+        this.autor = autor;
+    }
+
+    public Livro( ) {
+        this.isbn = "000-00-00000-00-0";
+    }
+
     boolean temAutor(){
         return this.autor != null;
     }
@@ -38,5 +48,44 @@ public class Livro {
     double retornaValor(){
         return this.valor;
     }
-    //parei em getters e setters
+    
+    public String getNome() {
+        return this.nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getDescricao() {
+        return this.descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
+    public double getValor() {
+        return this.valor;
+    }
+
+    public void setValor(double valor) {
+        this.valor = valor;
+    }
+
+    public String getIsbn() {
+        return this.isbn;
+    }
+
+    public void setIsbn(String isbn) {
+        this.isbn = isbn;
+    }
+
+    public Autor getAutor() {
+        return this.autor;
+    }
+
+    public void setAutor(Autor autor) {
+        this.autor = autor;
+    }
 }
