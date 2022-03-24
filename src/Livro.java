@@ -38,4 +38,5 @@ public class Livro {
     double retornaValor(){
         return this.valor;
     }
+    //parei em getters e setters
 }
