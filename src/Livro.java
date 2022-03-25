@@ -4,15 +4,13 @@ public class Livro {
     private double valor;
     String isbn;
     Autor autor;
+    private boolean impresso;
 
 
     public Livro(Autor autor) {
-        this();
         this.autor = autor;
-    }
-
-    public Livro( ) {
         this.isbn = "000-00-00000-00-0";
+        this.impresso = true;
     }
 
     boolean temAutor(){
@@ -37,6 +35,7 @@ public class Livro {
         if(porcentagem > 0.3)
             return false;
         this.valor -= this.valor * porcentagem;
+        System.out.println("aplicando desconto no livro...");
         return true;
 
     }
@@ -87,5 +86,7 @@ public class Livro {
 
     public void setAutor(Autor autor) {
         this.autor = autor;
+
+    //Classe abstrata cap 6
     }
 }
